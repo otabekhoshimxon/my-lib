@@ -1,5 +1,6 @@
 package uz.mylib;
 
+
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class ExecutionTimeAspect {
 
     // Annotatsiyalangan metodlar uchun qo'llaniladigan @Around Advice
-    @Around("@annotation(com.example.annotations.ExecutionTime)")
+    @Around("@annotation(uz.mylib.ExecutionTime)")
     public Object measureExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
         
